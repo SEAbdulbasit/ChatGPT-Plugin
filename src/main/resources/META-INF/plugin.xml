@@ -6,13 +6,9 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.seabdulbasit.chatgptplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.seabdulbasit.chatgptplugin.toolWindow.ChatGPTWidowFactory"
+                    id="ChatGPTToolWindow"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.seabdulbasit.chatgptplugin.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
-    </applicationListeners>
 </idea-plugin>
