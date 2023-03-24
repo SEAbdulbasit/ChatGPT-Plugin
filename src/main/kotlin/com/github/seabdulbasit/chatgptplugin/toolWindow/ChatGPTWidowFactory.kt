@@ -1,5 +1,6 @@
 package com.github.seabdulbasit.chatgptplugin.toolWindow
 
+import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
@@ -26,7 +27,6 @@ class ChatGPTWidowFactory : ToolWindowFactory {
     override fun shouldBeAvailable(project: Project) = true
 
     class MyToolWindow(toolWindow: ToolWindow) {
-
 
         fun getContent() = JBPanel<JBPanel<*>>().apply {
             val webView = JBCefBrowser()
