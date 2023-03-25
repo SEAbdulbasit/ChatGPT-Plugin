@@ -26,6 +26,11 @@ Download the Chat-GPT plugin jar file [here](https://github.com/SEAbdulbasit/Cha
 
 To use the plugin, simply open the ChatGPT tool window and start chatting with GPT-3. You can ask any questions or provide any input that you would normally provide when using GPT-3 in a web browser.
 
+
+Note: This plugin uses WebView to load the ChatGPT website within the plugin interface.
+
+
+
 ## License
 
 This plugin is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
