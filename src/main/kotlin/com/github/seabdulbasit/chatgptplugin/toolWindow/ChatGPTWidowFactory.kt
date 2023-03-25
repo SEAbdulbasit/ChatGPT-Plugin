@@ -1,13 +1,13 @@
 package com.github.seabdulbasit.chatgptplugin.toolWindow
 
-import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
-import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
 import com.intellij.ui.jcef.JBCefBrowser
+import java.awt.BorderLayout
+import javax.swing.JPanel
 
 
 class ChatGPTWidowFactory : ToolWindowFactory {
@@ -28,10 +28,10 @@ class ChatGPTWidowFactory : ToolWindowFactory {
 
     class MyToolWindow(toolWindow: ToolWindow) {
 
-        fun getContent() = JBPanel<JBPanel<*>>().apply {
+        fun getContent() = JPanel(BorderLayout()).apply {
             val webView = JBCefBrowser()
             webView.loadURL("https://chat.openai.com/")
-            add(webView.component)
+            add(webView.component, BorderLayout.CENTER)
         }
     }
 }

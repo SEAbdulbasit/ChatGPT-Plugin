@@ -3,7 +3,9 @@
 # ChatGPT-Plugin Changelog
 
 ## [Unreleased]
+### Added
 - Just change log updates
+- Expanding the webview to cover the whole tools view
 
 ## [0.0.1] - 2023-03-25
 
