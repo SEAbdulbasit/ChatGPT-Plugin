@@ -108,9 +108,10 @@ tasks {
     }
 
     signPlugin {
-        certificateChain.set(environment("CERTIFICATE_CHAIN"))
-        privateKey.set(environment("PRIVATE_KEY"))
-        password.set(environment("PRIVATE_KEY_PASSWORD"))
+        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+        certificateChain.set(File(System.getenv("CERTIFICATE_CHAIN") ?: "./certs/chain.crt").readText(Charsets.UTF_8))
+        certificateChain.set(File(System.getenv("PRIVATE_KEY") ?: "./certs/private.pem").readText(Charsets.UTF_8))
+
     }
 
     publishPlugin {
