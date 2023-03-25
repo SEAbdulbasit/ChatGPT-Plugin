@@ -1,44 +1,31 @@
-# ChatGPT-Plugin
+# ChatGPT Plugin
 
-![Build](https://github.com/SEAbdulbasit/ChatGPT-Plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+This plugin enables you to use Chat-GPT directly from your IDE, such as IntelliJ or Android Studio.
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `PLUGIN_ID` in the above README badges.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Features
 
-<!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
-<!-- Plugin description end -->
+- Chat with GPT-3 directly from your IDE
+- Seamless integration with IntelliJ and Android Studio
+- Simple and intuitive interface
+- Get instant answers to your questions without leaving your coding environment
 
 ## Installation
 
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "ChatGPT-Plugin"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+You can download the JAR file for this plugin from the [releases section](https://github.com/SEAbdulbasit/ChatGPT-Plugin/releases). Alternatively, you can install it directly from the IntelliJ or Android Studio Plugin Marketplace.
 
-  Download the [latest release](https://github.com/SEAbdulbasit/ChatGPT-Plugin/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+## Usage
+
+To use the plugin, simply open the ChatGPT tool window and start chatting with GPT-3. You can ask any questions or provide any input that you would normally provide when using GPT-3 in a web browser.
+
+## License
+
+This plugin is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Contributions
+
+Contributions to this plugin are always welcome. If you find any bugs or have any feature requests, please create an issue or submit a pull request.
 
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+## Contact
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+If you have any questions or concerns, you can contact me at [abdulbasit5361234@gmail.com](mailto:youremail@example.com).
