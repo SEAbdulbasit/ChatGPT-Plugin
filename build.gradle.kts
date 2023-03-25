@@ -17,6 +17,7 @@ plugins {
     id("org.jetbrains.qodana") version "0.1.13"
     // Gradle Kover Plugin
     id("org.jetbrains.kotlinx.kover") version "0.6.1"
+    id("org.openjfx.javafxplugin") version "0.0.9"
 }
 
 group = properties("pluginGroup").get()
@@ -25,6 +26,23 @@ version = properties("pluginVersion").get()
 // Configure project's dependencies
 repositories {
     mavenCentral()
+    mavenLocal()
+}
+
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("org.openjfx:javafx-controls:16")
+    implementation("org.openjfx:javafx-web:16")
+    implementation("org.openjfx:javafx-web:16")
+    implementation("org.openjfx:javafx-swing:16")
+    implementation("org.graalvm.sdk:graal-sdk:21.2.0")
+    implementation("org.openjfx:javafx-swing:11-ea+24")
+}
+
+javafx {
+    version = "16"
+    modules = listOf("javafx.controls", "javafx.web", "javafx.graphics", "javafx.swing")
 }
 
 // Set the JVM language level used to build the project. Use Java 11 for 2020.3+, and Java 17 for 2022.2+.
@@ -76,7 +94,7 @@ tasks {
             val start = "<!-- Plugin description -->"
             val end = "<!-- Plugin description end -->"
 
-            with (it.lines()) {
+            with(it.lines()) {
                 if (!containsAll(listOf(start, end))) {
                     throw GradleException("Plugin description section not found in README.md:\n$start ... $end")
                 }
@@ -107,12 +125,12 @@ tasks {
         systemProperty("jb.consents.confirmation.enabled", "false")
     }
 
-    signPlugin {
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-        certificateChain.set(File(System.getenv("CERTIFICATE_CHAIN") ?: "./certs/chain.crt").readText(Charsets.UTF_8))
-        certificateChain.set(File(System.getenv("PRIVATE_KEY") ?: "./certs/private.pem").readText(Charsets.UTF_8))
-
-    }
+//    signPlugin {
+//        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+//        certificateChain.set(File(System.getenv("CERTIFICATE_CHAIN") ?: "./certs/chain.crt").readText(Charsets.UTF_8))
+//        certificateChain.set(File(System.getenv("PRIVATE_KEY") ?: "./certs/private.pem").readText(Charsets.UTF_8))
+//
+//    }
 
     publishPlugin {
         dependsOn("patchChangelog")
@@ -120,6 +138,10 @@ tasks {
         // The pluginVersion is based on the SemVer (https://semver.org) and supports pre-release labels, like 2.1.7-alpha.3
         // Specify pre-release label to publish the plugin in a custom Release Channel automatically. Read more:
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
-        channels.set(properties("pluginVersion").map { listOf(it.split('-').getOrElse(1) { "default" }.split('.').first()) })
+        channels.set(properties("pluginVersion").map {
+            listOf(
+                it.split('-').getOrElse(1) { "default" }.split('.').first()
+            )
+        })
     }
 }
