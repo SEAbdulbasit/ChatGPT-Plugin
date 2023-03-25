@@ -6,6 +6,7 @@
 ### Added
 - Just change log updates
 - Expanding the webview to cover the whole tools view
+- Visible when Intelliji is indexing
 
 ## [0.0.1] - 2023-03-25
 

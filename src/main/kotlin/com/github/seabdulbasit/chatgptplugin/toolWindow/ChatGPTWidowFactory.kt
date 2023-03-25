@@ -4,6 +4,7 @@ import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
+import com.intellij.openapi.wm.ToolWindowManager
 import com.intellij.ui.content.ContentFactory
 import com.intellij.ui.jcef.JBCefBrowser
 import java.awt.BorderLayout
@@ -24,7 +25,11 @@ class ChatGPTWidowFactory : ToolWindowFactory {
         toolWindow.contentManager.addContent(content)
     }
 
-    override fun shouldBeAvailable(project: Project) = true
+    override fun shouldBeAvailable(project: Project): Boolean {
+        val toolWindow = ToolWindowManager.getInstance(project).getToolWindow("Chat-GPT")
+        toolWindow?.show { }
+        return true
+    }
 
     class MyToolWindow(toolWindow: ToolWindow) {
 
