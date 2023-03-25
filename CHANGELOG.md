@@ -3,8 +3,9 @@
 # ChatGPT-Plugin Changelog
 
 ## [Unreleased]
+- Just change log updates
 
-## [0.0.2] - 2023-03-25
+## [0.0.1] - 2023-03-25
 
 ### Added
 - Initial release of Chat-GPT IntelliJ plugin
