@@ -1,6 +1,8 @@
 # ChatGPT Plugin
 
+<!-- Plugin description -->
 This plugin enables you to use Chat-GPT directly from your IDE, such as IntelliJ or Android Studio.
+<!-- Plugin description end -->
 
 ## Features
 
