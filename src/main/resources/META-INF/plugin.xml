@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.seabdulbasit.chatgptplugin</id>
-    <name>ChatGPT-Plugin Template</name>
+    <name>ChatGPT-Plugin</name>
     <vendor>seabdulbasit</vendor>
 
     <depends>com.intellij.modules.platform</depends>
