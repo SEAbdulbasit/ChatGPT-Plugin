@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.seabdulbasit.chatgptplugin</id>
+    <id>com.github.seabdulbasit.chatgptassistant</id>
     <name>ChatGPT-Assistant</name>
     <vendor>seabdulbasit</vendor>
 
