@@ -24,11 +24,14 @@ Download the Chat-GPT plugin jar file [here](https://github.com/SEAbdulbasit/Cha
 
 ## Usage
 
-To use the plugin, simply open the ChatGPT tool window and start chatting with GPT-3. You can ask any questions or provide any input that you would normally provide when using GPT-3 in a web browser.
+To use the plugin, simply open the ChatGPT tool window and start chatting with ChatGPT. You can ask any questions or provide any input that you would normally provide when using Chat-GPT in a web browser.
 
 
 Note: This plugin uses WebView to load the ChatGPT website within the plugin interface.
 
+## Usage on Android Studio
+As this plugin uses JCEF browser which is not bundled with Android Studio so we need to change the Android Studio run time. For changing runtime, you can find the instructions 
+[here](https://www.jetbrains.com/help/idea/switching-boot-jdk.html). Make sure to select the runtime that supports JCEF browser.
 
 
 ## License
