@@ -33,6 +33,10 @@ Note: This plugin uses WebView to load the ChatGPT website within the plugin int
 As this plugin uses JCEF browser which is not bundled with Android Studio so we need to change the Android Studio run time. For changing runtime, you can find the instructions 
 [here](https://www.jetbrains.com/help/idea/switching-boot-jdk.html). Make sure to select the runtime that supports JCEF browser.
 
+## Known Issue
+For now Login with Google or any other auth throws browser maynot be secure exception. This is a know issue and will be fixing that soon. For now, try to login on Chat-GPT website 
+with password instead of Google. Once your password and account is set then try login in the plugin and it should work.
+
 
 ## License
 
